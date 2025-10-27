@@ -86,7 +86,7 @@ const Services = () => {
       sessions: "2-3 sessions"
     },
     { 
-      name: "Electro Couttry", 
+      name: "Electro Cautery", 
       short: "Precision skin tag removal",
       details: "Quick and effective removal of skin tags, warts, and minor skin imperfections using controlled electrical current. Minimal to no scarring.",
       duration: "15-20 min",
