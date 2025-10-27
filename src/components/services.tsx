@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react"; 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -316,12 +316,14 @@ const Services = () => {
                   >
                     <div className={`relative bg-card rounded-3xl border-2 border-border overflow-hidden transition-all duration-500 ${isMobile ? (isExpanded ? 'border-primary shadow-lg' : '') : 'hover:border-primary hover:shadow-[var(--shadow-glow)] group-hover:border-primary'} ${isMobile ? 'h-auto' : 'h-[500px]'}`}>
                       {/* Card number */}
-                      <div className="absolute top-4 md:top-6 right-4 md:right-6 w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-lg md:text-xl z-10 shadow-lg">
+                      <div
+                        className={`absolute z-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold ${isMobile ? 'top-3 left-4 w-10 h-10 text-sm shadow' : 'top-4 md:top-6 right-4 md:right-6 w-12 h-12 md:w-14 md:h-14 text-lg md:text-xl shadow-lg'}`}
+                      >
                         {(index + 1).toString().padStart(2, '0')}
                       </div>
 
                       {/* Content */}
-                      <div className="relative h-full p-6 md:p-8 flex flex-col">
+                      <div className={`relative h-full p-6 md:p-8 flex flex-col ${isMobile ? 'pl-16' : ''}`}>
                         {/* Title section - always visible */}
                         <div className="mb-4 md:mb-6">
                           <h3 className={`text-2xl md:text-3xl font-bold text-foreground mb-2 md:mb-3 transition-colors ${isMobile ? (isExpanded ? 'text-primary' : '') : 'group-hover:text-primary'}`}>
@@ -420,12 +422,14 @@ const Services = () => {
                   >
                     <div className={`relative bg-card rounded-3xl border-2 border-border overflow-hidden transition-all duration-500 ${isMobile ? (isExpanded ? 'border-accent shadow-lg' : '') : 'hover:border-accent hover:shadow-[var(--shadow-glow)] group-hover:border-accent'} ${isMobile ? 'h-auto' : 'h-[500px]'}`}>
                       {/* Card number */}
-                      <div className="absolute top-4 md:top-6 right-4 md:right-6 w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white font-bold text-lg md:text-xl z-10 shadow-lg">
+                      <div
+                        className={`absolute z-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white font-bold ${isMobile ? 'top-3 left-4 w-10 h-10 text-sm shadow' : 'top-4 md:top-6 right-4 md:right-6 w-12 h-12 md:w-14 md:h-14 text-lg md:text-xl shadow-lg'}`}
+                      >
                         {(index + 1).toString().padStart(2, '0')}
                       </div>
 
                       {/* Content */}
-                      <div className="relative h-full p-6 md:p-8 flex flex-col">
+                      <div className={`relative h-full p-6 md:p-8 flex flex-col ${isMobile ? 'pl-16' : ''}`}>
                         {/* Title section */}
                         <div className="mb-4 md:mb-6">
                           <h3 className={`text-2xl md:text-3xl font-bold text-foreground mb-2 md:mb-3 transition-colors ${isMobile ? (isExpanded ? 'text-accent' : '') : 'group-hover:text-accent'}`}>
